@@ -1,2 +1,5 @@
-export { default as Sidebar } from './sidebar/Sidebar'
-export { default as Navbar } from './navbar/Navbar'
+export { default as Sidebar } from './Sidebar'
+export { default as Navbar } from './Navbar'
+export { default as Menu } from './Menu'
+export { default as MenuItem } from './MenuItem'
+export { default as NavItem } from './NavItem'

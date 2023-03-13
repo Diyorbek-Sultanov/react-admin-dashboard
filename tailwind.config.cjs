@@ -11,6 +11,8 @@ module.exports = {
 			},
 			flex: {
 				flexHome: 6,
+				flexFeatured: 2,
+				flexChart: 4,
 			},
 			boxShadow: {
 				widgetShadow: '2px 4px 10px 1px rgba(201, 201, 201, 0.47)',
@@ -20,6 +22,9 @@ module.exports = {
 				widgetIconBgShop: 'rgba(218, 165, 32, .2)',
 				widgetIconBgMoney: 'rgba(0, 128, 0, .2)',
 				widgetIconBgBalance: 'rgba(128, 0, 128, .2)',
+			},
+			gridTemplateColumns: {
+				chartCols: '2fr, 5fr',
 			},
 		},
 	},

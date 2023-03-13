@@ -5,7 +5,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined'
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined'
 
-import { Navbar, Sidebar, Widget } from '@components/index'
+import { Chart, Featured, Navbar, Sidebar, Widget } from '@components/index'
 import { IStats } from '../interfaces/stats.interface'
 
 const stats: IStats[] = [
@@ -46,6 +46,7 @@ const stats: IStats[] = [
 		percentage: '78%',
 	},
 ]
+const colors: string[] = ['#275be8', '#c4e8ef']
 
 const Home: FC = () => {
 	return (
@@ -57,6 +58,10 @@ const Home: FC = () => {
 					{stats.map((stat, i) => (
 						<Widget key={i} {...stat} />
 					))}
+				</div>
+				<div className='grid md:grid-cols-chartCols grid-cols-1 m-6 gap-5 py-1 px-5'>
+					<Featured colors={colors} />
+					<Chart />
 				</div>
 			</div>
 		</div>

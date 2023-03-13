@@ -5,7 +5,14 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined'
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined'
 
-import { Chart, Featured, Navbar, Sidebar, Widget } from '@components/index'
+import {
+	Chart,
+	Featured,
+	Navbar,
+	Sidebar,
+	List,
+	Widget,
+} from '@components/index'
 import { IStats } from '../interfaces/stats.interface'
 
 const stats: IStats[] = [
@@ -62,6 +69,12 @@ const Home: FC = () => {
 				<div className='grid md:grid-cols-chartCols grid-cols-1 m-6 gap-5 py-1 px-5'>
 					<Featured colors={colors} />
 					<Chart />
+				</div>
+				<div className='m-5 p-5 shadow-widgetShadow'>
+					<h2 className='font-medium mb-4 text-gray text-lg'>
+						Latest Transactions
+					</h2>
+					<List />
 				</div>
 			</div>
 		</div>

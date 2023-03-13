@@ -22,6 +22,8 @@ module.exports = {
 				widgetIconBgShop: 'rgba(218, 165, 32, .2)',
 				widgetIconBgMoney: 'rgba(0, 128, 0, .2)',
 				widgetIconBgBalance: 'rgba(128, 0, 128, .2)',
+				statusApproved: 'rgba(0, 128, 0, .151)',
+				statusPending: 'rgba(189, 189, 3, .103)',
 			},
 			gridTemplateColumns: {
 				chartCols: '2fr, 5fr',

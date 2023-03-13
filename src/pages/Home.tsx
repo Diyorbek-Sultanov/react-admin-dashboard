@@ -1,5 +1,51 @@
 import { FC } from 'react'
-import { Navbar, Sidebar } from '@components/index'
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined'
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined'
+
+import { Navbar, Sidebar, Widget } from '@components/index'
+import { IStats } from '../interfaces/stats.interface'
+
+const stats: IStats[] = [
+	{
+		type: 'users',
+		title: 'users',
+		Icon: PersonOutlinedIcon,
+		IconArrow: KeyboardArrowUpIcon,
+		link: 'See all users',
+		money: '100',
+		percentage: '20%',
+	},
+	{
+		type: 'orders',
+		title: 'orders',
+		Icon: ShoppingCartOutlinedIcon,
+		IconArrow: KeyboardArrowUpIcon,
+		link: 'View all orders',
+		money: '100',
+		percentage: '30%',
+	},
+	{
+		type: 'earnings',
+		title: 'earnings',
+		Icon: PaidOutlinedIcon,
+		IconArrow: KeyboardArrowUpIcon,
+		link: 'View net earnings',
+		money: '$100',
+		percentage: '45%',
+	},
+	{
+		type: 'balance',
+		title: 'balance',
+		Icon: AccountBalanceWalletOutlinedIcon,
+		IconArrow: KeyboardArrowUpIcon,
+		link: 'See all users',
+		money: '$100',
+		percentage: '78%',
+	},
+]
 
 const Home: FC = () => {
 	return (
@@ -7,7 +53,11 @@ const Home: FC = () => {
 			<Sidebar />
 			<div className='flex-flexHome'>
 				<Navbar />
-				container
+				<div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 m-6'>
+					{stats.map((stat, i) => (
+						<Widget key={i} {...stat} />
+					))}
+				</div>
 			</div>
 		</div>
 	)

@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import Layout from '@layout/Layout'
+
 import Home from './pages/Home'
 import List from './pages/List'
 import Login from './pages/Login'
@@ -11,7 +13,7 @@ const App: FC = () => {
 	return (
 		<div className='App'>
 			<Routes>
-				<Route path='/'>
+				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />
 					<Route path='login' element={<Login />} />
 					<Route path='users'>

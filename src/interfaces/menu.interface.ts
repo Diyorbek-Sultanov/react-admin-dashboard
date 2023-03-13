@@ -5,4 +5,5 @@ export interface IMenu {
 	title: string
 	Icon: ComponentType<SvgIconProps>
 	text?: string
+	link?: string
 }

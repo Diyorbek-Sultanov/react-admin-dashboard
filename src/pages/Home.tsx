@@ -57,27 +57,23 @@ const colors: string[] = ['#275be8', '#c4e8ef']
 
 const Home: FC = () => {
 	return (
-		<div className='flex'>
-			<Sidebar />
-			<div className='flex-flexHome'>
-				<Navbar />
-				<div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 m-6'>
-					{stats.map((stat, i) => (
-						<Widget key={i} {...stat} />
-					))}
-				</div>
-				<div className='grid md:grid-cols-chartCols grid-cols-1 m-6 gap-5 py-1 px-5'>
-					<Featured colors={colors} />
-					<Chart />
-				</div>
-				<div className='m-5 p-5 shadow-widgetShadow'>
-					<h2 className='font-medium mb-4 text-gray text-lg'>
-						Latest Transactions
-					</h2>
-					<List />
-				</div>
+		<>
+			<div className='grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 m-6'>
+				{stats.map((stat, i) => (
+					<Widget key={i} {...stat} />
+				))}
 			</div>
-		</div>
+			<div className='grid md:grid-cols-chartCols grid-cols-1 m-6 gap-5 py-1 px-5'>
+				<Featured colors={colors} />
+				<Chart />
+			</div>
+			<div className='m-5 p-5 shadow-widgetShadow'>
+				<h2 className='font-medium mb-4 text-gray text-lg'>
+					Latest Transactions
+				</h2>
+				<List />
+			</div>
+		</>
 	)
 }
 

@@ -5,15 +5,9 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined'
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined'
 
-import {
-	Chart,
-	Featured,
-	Navbar,
-	Sidebar,
-	List,
-	Widget,
-} from '@components/index'
+import { Chart, Featured, List, Widget } from '@components/index'
 import { IStats } from '../interfaces/stats.interface'
+import Heading from '@ui/Heading'
 
 const stats: IStats[] = [
 	{
@@ -68,9 +62,7 @@ const Home: FC = () => {
 				<Chart />
 			</div>
 			<div className='m-5 p-5 shadow-widgetShadow'>
-				<h2 className='font-medium mb-4 text-gray text-lg'>
-					Latest Transactions
-				</h2>
+				<Heading>Latest Transactions</Heading>
 				<List />
 			</div>
 		</>

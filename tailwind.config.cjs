@@ -24,6 +24,7 @@ module.exports = {
 				widgetIconBgBalance: 'rgba(128, 0, 128, .2)',
 				statusApproved: 'rgba(0, 128, 0, .151)',
 				statusPending: 'rgba(189, 189, 3, .103)',
+				editButton: '#7551f818',
 			},
 			gridTemplateColumns: {
 				chartCols: '2fr, 5fr',

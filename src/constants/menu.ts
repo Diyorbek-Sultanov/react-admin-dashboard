@@ -10,6 +10,7 @@ import PsychologyIcon from '@mui/icons-material/Psychology'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import LogoutIcon from '@mui/icons-material/Logout'
+import PersonIcon from '@mui/icons-material/Person'
 
 import { IMenu } from 'interfaces/menu.interface'
 
@@ -24,6 +25,11 @@ export const list: IMenu[] = [
 		title: 'Users',
 		Icon: GroupIcon,
 		link: '/users',
+	},
+	{
+		title: 'User detail',
+		Icon: PersonIcon,
+		link: '/users/2w2w',
 	},
 	{
 		title: 'Products',

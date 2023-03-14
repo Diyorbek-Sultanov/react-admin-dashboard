@@ -20,7 +20,8 @@
 		"paths": {
 			"@components/*": ["components/*"],
 			"@layout/*": ["layout/*"],
-			"@constants/*": ["constants/*"]
+			"@constants/*": ["constants/*"],
+			"@ui/*": ["ui/*"]
 		}
 	},
 	"include": ["src"],

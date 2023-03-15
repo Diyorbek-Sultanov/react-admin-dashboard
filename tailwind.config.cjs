@@ -28,6 +28,7 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				chartCols: '2fr, 5fr',
+				newPageCols: '1fr 2fr',
 			},
 		},
 	},

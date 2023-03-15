@@ -1,15 +1,25 @@
-import { FC } from 'react'
-
+import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
 
 import { list } from '@constants/menu'
 
 const MenuItem: FC = () => {
+	const [active, setActive] = useState(0)
+
 	return (
 		<div>
 			{list.map((list, i) => (
 				<div key={i}>
-					<li className='flex items-center p-1 cursor-pointer gap-x-2 hover:bg-[#ece8ff] rounded-md'>
+					<li
+						onClick={() => setActive(i)}
+						className={clsx(
+							'flex items-center p-1 cursor-pointer gap-x-2 hover:bg-[#ece8ff] rounded-md',
+							{
+								['bg-[#ece8ff]']: active === i,
+							},
+						)}
+					>
 						<list.Icon color='action' />
 						<Link
 							to={`${list.link}`}

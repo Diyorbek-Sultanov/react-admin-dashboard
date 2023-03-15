@@ -20,6 +20,7 @@ const DataTable: FC = () => {
 				</Link>
 			</div>
 			<DataGrid
+				className='data-table'
 				rows={rows}
 				columns={columns}
 				initialState={{

@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import clsx from 'clsx'
 
 import Layout from '@layout/Layout'
 
@@ -8,10 +9,13 @@ import List from './pages/List'
 import Login from './pages/Login'
 import New from './pages/New'
 import Single from './pages/Single'
+import { useThemeContext } from './hooks/useThemeContext'
 
 const App: FC = () => {
+	const { dark } = useThemeContext()
+
 	return (
-		<div className='App'>
+		<div className={clsx(dark ? 'app dark' : 'app')}>
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<Home />} />

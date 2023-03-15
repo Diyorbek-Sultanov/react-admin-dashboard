@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 
 import { list } from '@constants/menu'
+import { useThemeContext } from '../hooks/useThemeContext'
 
 const MenuItem: FC = () => {
 	const [active, setActive] = useState(0)
+	const { dark } = useThemeContext()
 
 	return (
 		<div>
@@ -14,13 +16,13 @@ const MenuItem: FC = () => {
 					<li
 						onClick={() => setActive(i)}
 						className={clsx(
-							'flex items-center p-1 cursor-pointer gap-x-2 hover:bg-[#ece8ff] rounded-md',
+							'flex items-center p-1 cursor-pointer gap-x-2 hover:bg-[#ece8ff] rounded-md sidebar-item',
 							{
 								['bg-[#ece8ff]']: active === i,
 							},
 						)}
 					>
-						<list.Icon color='action' />
+						<list.Icon color={dark ? 'inherit' : 'action'} />
 						<Link
 							to={`${list.link}`}
 							className='text-sm font-semibold text-gray'

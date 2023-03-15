@@ -41,7 +41,7 @@ const Form: FC<IFormInput> = ({ onChangeFile }) => {
 				<div className='w-2/5' key={user.id}>
 					<label>{user.label}</label>
 					<input
-						className='w-full p-1 border-b border-b-gray outline-none'
+						className='w-full p-1 border-b border-b-gray bg-transparent outline-none'
 						type={user.type}
 						placeholder={user.placeholder}
 					/>
